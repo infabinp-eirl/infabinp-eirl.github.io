@@ -56,3 +56,27 @@ button {
     background-color: var(--color-boton);
     color: white;
 }
+.seccion-proyectos {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.tarjeta {
+    /* Un borde sutil del color de tu tema */
+    border: 2px solid var(--color-boton);
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    margin: 20px auto; /* 'auto' centra la tarjeta horizontalmente */
+    max-width: 400px; /* Que no sea demasiado ancha */
+    
+    /* Sombra suave para darle efecto 3D */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+    /* Transición para animaciones futuras */
+    transition: transform 0.2s;
+}
+
+/* Efecto divertido: La tarjeta "salta" un poco cuando pasas el mouse */
+.tarjeta:hover {
+    transform: translateY(-5px);
+}

@@ -1,0 +1,30 @@
+:root {
+    --color-fondo: #ffffff;
+    --color-texto: #000000;
+    --color-boton: #007bff;
+}
+
+.modo-oscuro {
+    --color-fondo: #121212;
+    --color-texto: #e0e0e0;
+    --color-boton: #bb86fc;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    transition: background-color 0.5s ease;
+}
+
+button {
+    background-color: var(--color-boton);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}

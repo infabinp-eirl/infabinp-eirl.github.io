@@ -40,16 +40,17 @@ body {
 }
 
 .nav-btn {
-    border: 1px solid #333;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
+    border: none; /* Quitamos el borde */
     background-color: transparent;
     color: #999;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; /* Aseguramos que tenga la misma letra */
+    font-size: 14px;
+    transition: color 0.3s;
 }
 .nav-btn:hover {
     color: #fff;
-    border-color: #fff;
 }
 
 /* --- MENÚ DESPLEGABLE (El rectángulo de contacto) --- */

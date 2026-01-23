@@ -2,12 +2,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #111111; /* FONDO GENERAL NEGRO */
-    color: #e0e0e0; /* TEXTO CLARO */
+    background-color: #ffffff; /* FONDO BLANCO */
+    color: #333333; /* TEXTO OSCURO */
     text-align: center;
 }
 
-/* --- CABECERA Y PORTADA (Ya eran oscuras, se mantienen) --- */
+/* --- CABECERA Y PORTADA (Negro) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -44,7 +44,7 @@ body {
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
-    background-color: transparent; /* Para asegurar que el botón sea transparente */
+    background-color: transparent;
     color: #999;
 }
 .nav-btn:hover {
@@ -52,27 +52,27 @@ body {
     border-color: #fff;
 }
 
-
-/* --- ESTILOS DEL MENÚ DESPLEGABLE (CLICK) --- */
+/* --- MENÚ DESPLEGABLE (El rectángulo de contacto) --- */
 .dropdown {
     display: inline-block;
     position: relative;
 }
 
+/* ESTO ES LO QUE QUERÍAS: El menú es oscuro para pegar con la cabecera */
 .dropdown-content {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: absolute;
     right: 0;
-    background-color: #1a1a1a; /* Fondo oscuro para el menú */
+    background-color: #1a1a1a; /* Fondo NEGRO */
     min-width: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); /* Sombra más oscura */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 101;
     border-radius: 4px;
     border: 1px solid #333;
     margin-top: 10px;
 }
 
-/* Clase que añade JS para mostrar el menú */
+/* Clase para mostrarlo con JS */
 .show {
     display: block;
 }
@@ -98,7 +98,7 @@ body {
     margin-left: 5px;
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO (Negro, ocupando todo el ancho) --- */
 .hero {
     background-color: #111;
     color: #fff;
@@ -144,17 +144,17 @@ body {
     background-color: #d43f43;
 }
 
-/* --- SECCIÓN PROYECTOS (AHORA OSCURA) --- */
+/* --- PROYECTOS (Vuelve a fondo Blanco) --- */
 .seccion-proyectos {
     padding: 80px 20px;
-    background-color: #111; /* Fondo negro */
+    background-color: #ffffff;
 }
 
 .titulo-seccion {
     text-align: center;
     font-size: 32px;
     margin-bottom: 60px;
-    color: #fff; /* Título blanco */
+    color: #222; /* Título oscuro */
     font-weight: 300;
 }
 
@@ -166,20 +166,20 @@ body {
     margin: 0 auto;
 }
 
-/* TARJETAS DARK MODE */
+/* TARJETAS BLANCAS (Con sombra) */
 .tarjeta-minimal {
-    background-color: #1a1a1a; /* Un gris muy oscuro, casi negro */
+    background-color: #fff; /* Fondo Blanco */
     padding: 40px;
     border-radius: 8px;
-    border: 1px solid #333; /* Borde sutil oscuro */
-    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra elegante */
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s;
     text-align: left;
 }
 
 .tarjeta-minimal:hover {
     transform: translateY(-5px);
-    background-color: #222; /* Se aclara un poquito al pasar el mouse */
-    border-color: #444;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
 .icono-proyecto {
@@ -188,12 +188,12 @@ body {
 }
 
 .tarjeta-minimal h3 {
-    color: #fff; /* Título blanco */
+    color: #111; /* Título negro */
     margin-top: 0;
 }
 
 .tarjeta-minimal p {
-    color: #aaa; /* Texto descriptivo gris claro */
+    color: #666; /* Texto gris */
     line-height: 1.6;
 }
 
@@ -210,11 +210,11 @@ body {
     text-decoration: underline;
 }
 
-/* --- HABILIDADES (AHORA OSCURAS) --- */
+/* --- HABILIDADES (Gris muy suave) --- */
 .seccion-habilidades {
     padding: 60px 20px;
-    background-color: #111; /* Fondo negro */
-    border-top: 1px solid #222;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
 }
 
 .skills-container {
@@ -227,9 +227,9 @@ body {
 }
 
 .skill {
-    background-color: #1a1a1a; /* Fondo oscuro */
-    color: #ccc; /* Texto claro */
-    border: 1px solid #333;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 14px;
@@ -243,12 +243,12 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- FOOTER OSCURO --- */
+/* --- FOOTER --- */
 footer {
     padding: 20px;
     font-size: 14px;
-    color: #888; /* Texto gris medio */
-    background-color: #111; /* Fondo negro */
-    border-top: 1px solid #222;
+    color: #666;
+    background-color: #fff;
+    border-top: 1px solid #eee;
     margin-top: auto;
 }

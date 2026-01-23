@@ -155,8 +155,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #111; /* Fondo muy oscuro estilo OnePageLove */
+    background-color: #ffffff; /* ANTES ERA #111, AHORA BLANCO */
+    color: #333333;
+}
+.navbar, .hero {
+    background-color: #111;
     color: #fff;
+}
+.hero p {
+    color: #bbb; 
 }
 .navbar {
     display: flex;
@@ -227,14 +234,14 @@ body {
 }
 .seccion-proyectos {
     padding: 80px 20px;
-    background-color: #111; /* Mismo fondo oscuro */
+    background-color: #ffffff; /* Mismo fondo oscuro */
 }
 
 .titulo-seccion {
     text-align: center;
     font-size: 32px;
     margin-bottom: 60px;
-    color: #fff;
+    color: #222; /* Título oscuro */
     font-weight: 300; /* Letra más fina y elegante */
 }
 
@@ -250,18 +257,18 @@ body {
 
 /* Diseño de la tarjeta minimalista */
 .tarjeta-minimal {
-    background-color: #1A1A1A; /* Un gris apenas más claro que el fondo */
+    background-color: #fff; /* Fondo blanco */
     padding: 40px;
     border-radius: 8px;
-    transition: transform 0.3s, background-color 0.3s;
-    border: 1px solid #333; /* Borde muy sutil */
-    text-align: left; /* Alineado a la izquierda como OnePageLove */
+    /* Sombra suave para que destaque sobre el fondo blanco */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+    border: 1px solid #f0f0f0; /* Borde muy clarito */
+    transition: transform 0.3s; /* Alineado a la izquierda como OnePageLove */
 }
 
 .tarjeta-minimal:hover {
     transform: translateY(-5px);
-    background-color: #222;
-    border-color: #444;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
 .icono-proyecto {
@@ -270,15 +277,12 @@ body {
 }
 
 .tarjeta-minimal h3 {
+    color: #111; /* Título del proyecto negro */
     margin-top: 0;
-    color: #fff;
-    font-size: 20px;
 }
 
 .tarjeta-minimal p {
-    color: #888;
-    line-height: 1.6;
-    font-size: 15px;
+    color: #666;
 }
 
 .link-proyecto {
@@ -295,9 +299,9 @@ body {
 }
 .seccion-habilidades {
     padding: 60px 20px;
-    background-color: #111; /* Mismo fondo */
-    text-align: center;
-    border-top: 1px solid #222; /* Línea separadora sutil */
+    background-color: #f9f9f9; /* Un gris muuuy suave para diferenciarlo un poco */
+    border-top: 1px solid #eee;
+    text-align: center; /* Línea separadora sutil */
 }
 
 .skills-container {
@@ -310,15 +314,11 @@ body {
 }
 
 .skill {
-    background-color: transparent; /* Fondo transparente elegante */
-    color: #888; /* Texto gris suave */
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd; /* Borde gris suave */
     padding: 10px 20px;
-    border: 1px solid #333; /* Borde fino */
-    border-radius: 4px; /* Un poco más cuadrado, más técnico */
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    cursor: default;
+    border-radius: 4px;
 }
 
 /* Efecto al pasar el mouse: se ilumina */
@@ -326,4 +326,9 @@ body {
     border-color: #E84C50; /* El rojo de tu marca */
     color: #fff;
     transform: translateY(-2px);
+}
+footer {
+    color: #666; /* Texto oscuro */
+    background-color: #fff;
+    border-top: 1px solid #eee;
 }

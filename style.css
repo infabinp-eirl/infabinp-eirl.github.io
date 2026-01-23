@@ -293,3 +293,37 @@ body {
 .link-proyecto:hover {
     text-decoration: underline;
 }
+.seccion-habilidades {
+    padding: 60px 20px;
+    background-color: #111; /* Mismo fondo */
+    text-align: center;
+    border-top: 1px solid #222; /* Línea separadora sutil */
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill {
+    background-color: transparent; /* Fondo transparente elegante */
+    color: #888; /* Texto gris suave */
+    padding: 10px 20px;
+    border: 1px solid #333; /* Borde fino */
+    border-radius: 4px; /* Un poco más cuadrado, más técnico */
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Efecto al pasar el mouse: se ilumina */
+.skill:hover {
+    border-color: #E84C50; /* El rojo de tu marca */
+    color: #fff;
+    transform: translateY(-2px);
+}

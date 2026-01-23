@@ -151,3 +151,77 @@ footer {
     border-color: #166fe5 !important;
     transform: scale(1.05); /* Efecto de crecimiento */
 }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #111; /* Fondo muy oscuro estilo OnePageLove */
+    color: #fff;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #222; /* Línea sutil separadora */
+}
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+.navbar nav a {
+    text-decoration: none;
+    color: #999; /* Gris suave para textos secundarios */
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.navbar nav a:hover {
+    color: #fff;
+}
+/* Botón especial del menú */
+.nav-btn {
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+/* 2. HERO (PORTADA) */
+.hero {
+    text-align: center;
+    padding: 100px 20px; /* Mucho espacio arriba y abajo */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 48px; /* Texto gigante */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+.hero p {
+    color: #888;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.btn-hero {
+    background-color: #E84C50; /* El color "Rojo OnePageLove" */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.btn-hero:hover {
+    transform: translateY(-2px);
+    background-color: #d43f43;
+}

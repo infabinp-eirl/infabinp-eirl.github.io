@@ -253,3 +253,6 @@ footer {
     border-top: 1px solid #eee;
     margin-top: auto;
 }
+.dropdown-content i {
+    margin-right: 12px;
+}

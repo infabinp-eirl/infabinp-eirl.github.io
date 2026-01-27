@@ -52,8 +52,7 @@
                     scrolling="no" 
                     marginheight="0" 
                     marginwidth="0" 
-                    /* Usando un enlace genérico de embed para las coordenadas exactas -11.885896, -77.067611 */
-                    src="https://maps.google.com/maps?q=-11.885896,-77.067611&hl=es&z=18&output=embed"
+                    src="https://maps.google.com/maps?q=-11.885896,-77.067611&hl=es&z=19&output=embed"
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy">
@@ -73,11 +72,19 @@
                 </div>
 
                 <div class="info-item">
+                    <i class="fa-solid fa-map-pin"></i>
+                    <div>
+                        <strong>Referencia:</strong><br>
+                        A dos cuadras de la Panamericana Norte.<br>
+                        <span style="font-size: 13px; color: #888;">(Cerca al Hostal La Joya)</span>
+                    </div>
+                </div>
+
+                <div class="info-item">
                     <i class="fa-solid fa-clock"></i>
                     <div>
-                        <strong>Horario de Atención:</strong><br>
-                        Lunes a Viernes<br>
-                        9:00 AM - 6:00 PM
+                        <strong>Horario:</strong><br>
+                        Lun - Vie: 9:00 AM - 6:00 PM
                     </div>
                 </div>
 
@@ -88,6 +95,19 @@
                         <a href="https://wa.me/51981416933" target="_blank">+51 981 416 933</a>
                     </div>
                 </div>
+
+                <div class="botones-gps">
+                    <p style="margin: 0 0 10px 0; font-size: 14px; color: #555; font-weight: 600;">¿Cómo llegar?</p>
+                    
+                    <a href="https://waze.com/ul?ll=-11.885896,-77.067611&navigate=yes" target="_blank" class="btn-gps waze">
+                        <i class="fa-brands fa-waze"></i> Abrir en Waze
+                    </a>
+                    
+                    <a href="https://www.google.com/maps/search/?api=1&query=-11.885896,-77.067611" target="_blank" class="btn-gps gmaps">
+                        <i class="fa-solid fa-map-location-dot"></i> Google Maps
+                    </a>
+                </div>
+
             </div>
 
         </div>
@@ -99,3 +119,4 @@
 
     <script src="script.js"></script>
 </body>
+</html>

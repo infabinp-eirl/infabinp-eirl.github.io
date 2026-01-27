@@ -290,3 +290,58 @@ footer {
     border-top: 1px solid #eee;
     margin-top: auto;
 }
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-pagina {
+    font-size: 36px;
+    font-weight: 300;
+    color: #444;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.descripcion-pagina {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+/* El mapa grande, centrado y AHORA EN GRISES */
+.contenedor-mapa-centrado {
+    width: 100%;
+    height: 650px;
+    min-height: 650px;
+    background-color: #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+/* ESTA ES LA MAGIA: Convierte el mapa a escala de grises */
+.contenedor-mapa-centrado iframe {
+    filter: grayscale(100%) invert(5%); /* Grises elegantes */
+    transition: filter 0.3s; /* Efecto suave */
+}
+
+/* Opcional: Si quieres que vuelva a color al pasar el mouse */
+.contenedor-mapa-centrado iframe:hover {
+    filter: grayscale(0%);
+}
+
+footer {
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}

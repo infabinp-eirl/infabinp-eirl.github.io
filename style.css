@@ -1,3 +1,300 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #999;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: color 0.3s;
+    /* Permite alinear el icono y el texto verticalmente */
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar nav a:hover, .navbar nav a.link-activo {
+    color: #fff;
+}
+
+.nav-btn {
+    border: none;
+    background-color: transparent;
+    color: #999;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-btn:hover {
+    color: #fff;
+}
+
+.nav-btn i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* --- DROPDOWN --- */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1a1a1a;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 101;
+    border-radius: 4px;
+    border: 1px solid #333;
+    margin-top: 10px;
+}
+
+.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ddd !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    margin-left: 0 !important;
+    text-align: left;
+    transition: background-color 0.2s;
+    display: block; /* Restaurado a block para el dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+    color: #fff !important;
+}
+
+.dropdown-content i {
+    margin-right: 12px;
+}
+
+/* --- ELEMENTOS GENERALES (HERO, PROYECTOS, ETC) --- */
+.hero {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    color: #bbb;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.hero h1, .hero p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-hero {
+    background-color: #E84C50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    background-color: #d43f43;
+}
+
+.seccion-proyectos {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: #222;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-minimal {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.tarjeta-minimal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.icono-proyecto {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-minimal h3 {
+    color: #111;
+    margin-top: 0;
+}
+
+.tarjeta-minimal p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.link-proyecto {
+    color: #E84C50;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.link-proyecto:hover {
+    text-decoration: underline;
+}
+
+.seccion-habilidades {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill {
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    border-color: #E84C50;
+    color: #E84C50;
+    transform: translateY(-2px);
+}
+
+/* --- ESTILOS DE LA PÁGINA "LOCALES" --- */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-pagina {
+    font-size: 36px;
+    font-weight: 300;
+    color: #444;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.descripcion-pagina {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+/* El mapa grande y centrado (YA SIN FILTRO GRIS) */
+.contenedor-mapa-centrado {
+    width: 100%;
+    height: 650px;
+    min-height: 650px;
+    background-color: #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
+    margin-bottom: 40px;
+}
+
+/* SE ELIMINÓ EL BLOQUE QUE DABA EFECTO GRIS AL IFRAME */
+footer {
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
 .contenedor-principal {
     max-width: 1200px;
     margin: 60px auto;

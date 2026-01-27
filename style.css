@@ -2,12 +2,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff; /* FONDO BLANCO */
-    color: #333333; /* TEXTO OSCURO */
+    background-color: #ffffff;
+    color: #333333;
     text-align: center;
 }
 
-/* --- CABECERA Y PORTADA (Negro) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -40,31 +39,35 @@ body {
 }
 
 .nav-btn {
-    border: none; /* Quitamos el borde */
+    border: none;
     background-color: transparent;
     color: #999;
     padding: 8px 16px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif; /* Aseguramos que tenga la misma letra */
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     transition: color 0.3s;
 }
+
 .nav-btn:hover {
     color: #fff;
 }
 
-/* --- MENÚ DESPLEGABLE (El rectángulo de contacto) --- */
+.nav-btn i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
 .dropdown {
     display: inline-block;
     position: relative;
 }
 
-/* ESTO ES LO QUE QUERÍAS: El menú es oscuro para pegar con la cabecera */
 .dropdown-content {
     display: none;
     position: absolute;
     right: 0;
-    background-color: #1a1a1a; /* Fondo NEGRO */
+    background-color: #1a1a1a;
     min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 101;
@@ -73,13 +76,12 @@ body {
     margin-top: 10px;
 }
 
-/* Clase para mostrarlo con JS */
 .show {
     display: block;
 }
 
 .dropdown-content a {
-    color: #ddd !important; /* Texto claro */
+    color: #ddd !important;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -94,12 +96,10 @@ body {
     color: #fff !important;
 }
 
-.nav-btn i {
-    font-size: 12px;
-    margin-left: 5px;
+.dropdown-content i {
+    margin-right: 12px;
 }
 
-/* --- HERO (Negro, ocupando todo el ancho) --- */
 .hero {
     background-color: #111;
     color: #fff;
@@ -145,7 +145,6 @@ body {
     background-color: #d43f43;
 }
 
-/* --- PROYECTOS (Vuelve a fondo Blanco) --- */
 .seccion-proyectos {
     padding: 80px 20px;
     background-color: #ffffff;
@@ -155,24 +154,23 @@ body {
     text-align: center;
     font-size: 32px;
     margin-bottom: 60px;
-    color: #222; /* Título oscuro */
+    color: #222;
     font-weight: 300;
 }
 
 .grid-proyectos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* TARJETAS BLANCAS (Con sombra) */
 .tarjeta-minimal {
-    background-color: #fff; /* Fondo Blanco */
+    background-color: #fff;
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra elegante */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     border: 1px solid #f0f0f0;
     transition: transform 0.3s;
     text-align: left;
@@ -189,12 +187,12 @@ body {
 }
 
 .tarjeta-minimal h3 {
-    color: #111; /* Título negro */
+    color: #111;
     margin-top: 0;
 }
 
 .tarjeta-minimal p {
-    color: #666; /* Texto gris */
+    color: #666;
     line-height: 1.6;
 }
 
@@ -211,7 +209,6 @@ body {
     text-decoration: underline;
 }
 
-/* --- HABILIDADES (Gris muy suave) --- */
 .seccion-habilidades {
     padding: 60px 20px;
     background-color: #f9f9f9;
@@ -244,7 +241,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* --- FOOTER --- */
 footer {
     padding: 20px;
     font-size: 14px;
@@ -252,7 +248,4 @@ footer {
     background-color: #fff;
     border-top: 1px solid #eee;
     margin-top: auto;
-}
-.dropdown-content i {
-    margin-right: 12px;
 }

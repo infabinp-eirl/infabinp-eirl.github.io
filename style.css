@@ -156,6 +156,7 @@ body {
     margin-bottom: 60px;
     color: #222;
     font-weight: 300;
+    text-transform: uppercase; /* Para que se vea como en la referencia */
 }
 
 .grid-proyectos {
@@ -239,6 +240,70 @@ body {
     border-color: #E84C50;
     color: #E84C50;
     transform: translateY(-2px);
+}
+
+/* --- ESTILOS "FERREYROS" --- */
+.seccion-ubicacion {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #eee;
+}
+
+.contenedor-locales {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; /* Esto pone el menú y el mapa lado a lado */
+    gap: 20px;
+    height: 500px; /* Altura fija para que se vea imponente */
+}
+
+/* El menú de la izquierda */
+.lista-sedes {
+    width: 30%; /* Ocupa el 30% del ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-sede {
+    background-color: #999; /* Color gris de la referencia */
+    color: white;
+    padding: 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item-sede:hover {
+    background-color: #777;
+}
+
+/* La sede activa puede ser un gris un poco diferente */
+.item-sede.activo {
+    background-color: #888;
+}
+
+/* El mapa de la derecha */
+.visor-mapa {
+    width: 70%; /* Ocupa el resto del espacio */
+    background-color: #eee;
+}
+
+/* Responsivo para celulares: poner uno debajo del otro */
+@media (max-width: 768px) {
+    .contenedor-locales {
+        flex-direction: column;
+        height: auto;
+    }
+    .lista-sedes, .visor-mapa {
+        width: 100%;
+        height: 300px;
+    }
 }
 
 footer {

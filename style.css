@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff; /* Fondo general blanco */
-    color: #333333; /* Texto gris oscuro */
+    background-color: #ffffff;
+    color: #333333;
     text-align: center;
 }
 
@@ -13,7 +13,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #111; /* Barra negra */
+    background-color: #111;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -286,24 +286,19 @@ body {
     text-align: left;
 }
 
-/* 1. EL MAPA (ESTÉTICA DEL MARCO APLICADA AQUÍ) 
-  
-*/
+/* El Mapa (Con bordes redondeados y sombra) */
 .mapa-wrapper {
     flex: 2;
     height: auto;
     min-height: 500px;
     background-color: #eee;
-    
-    /* ESTÉTICA DEL MARCO: Bordes redondeados y sombra flotante */
     border-radius: 20px; 
     box-shadow: 0 20px 50px rgba(0,0,0,0.15); 
-    
     overflow: hidden;
-    border: none; /* Sin borde sólido para resaltar la sombra */
+    border: none;
 }
 
-/* 2. La Tarjeta de Información */
+/* La Tarjeta de Información */
 .tarjeta-info-local {
     flex: 1;
     background-color: #fff;
@@ -361,7 +356,7 @@ body {
     text-decoration: underline;
 }
 
-/* --- BOTONES GPS --- */
+/* --- BOTÓN GPS (ACTUALIZADO: NEGRO "PRO") --- */
 .botones-gps {
     margin-top: 10px;
     padding-top: 20px;
@@ -389,20 +384,21 @@ body {
     font-size: 18px;
 }
 
-/* Google Maps */
+/* CAMBIO: Botón Negro con texto blanco */
 .btn-gps.gmaps {
-    background-color: #f8f8f8;
-    color: #333;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: #111; /* Negro fuerte */
+    color: #fff; /* Texto blanco */
+    border: 1px solid #111;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra elegante */
 }
 
+/* Al pasar el mouse, cambia al rojo de la marca */
 .btn-gps.gmaps:hover {
     background-color: #E84C50;
-    color: white;
     border-color: #E84C50;
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(232, 76, 80, 0.3);
+    box-shadow: 0 5px 15px rgba(232, 76, 80, 0.4);
 }
 
 /* RESPONSIVE */

@@ -6,12 +6,13 @@ body {
     background-color: #ffffff;
     color: #333333;
     text-align: center;
+    /* Esto asegura que el footer siempre vaya al final pero sin forzar huecos gigantes */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* --- BARRA DE NAVEGACIÓN (NAVBAR) --- */
+/* --- BARRA DE NAVEGACIÓN --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -403,34 +404,35 @@ body {
     box-shadow: 0 8px 25px rgba(232, 76, 80, 0.4);
 }
 
-/* ========================================================
-   RESPONSIVE / VERSIÓN MÓVIL
-   Aplicando los cambios de las imágenes solicitadas
-   ======================================================== */
+/* --- RESPONSIVE / MÓVIL (AJUSTADO PARA NO DEJAR ESPACIO GIGANTE) --- */
 @media (max-width: 900px) {
-    /* Ajustamos el contenedor para dar más espacio a los bordes */
     .contenedor-principal {
         padding: 0 15px;
+        margin-top: 30px; /* Menos margen arriba */
+        margin-bottom: 20px; /* Menos margen abajo para reducir espacio blanco */
     }
 
-    /* 1. CAMBIO A COLUMNA: Apila los elementos uno encima del otro */
+    .descripcion-pagina {
+        margin-bottom: 40px; /* Menos distancia antes del mapa */
+        font-size: 16px;
+    }
+
     .contenedor-locales-split {
         flex-direction: column;
-        gap: 30px; /* 3. AIRE: Espacio de 30px entre mapa y tarjeta */
+        gap: 20px; /* Menos hueco entre mapa y tarjeta */
+        margin-bottom: 30px; /* Menos hueco antes del footer */
     }
     
-    /* 2. ANCHO 100%: El mapa ocupa todo el ancho */
     .mapa-wrapper {
         width: 100%;
-        min-height: 400px; /* Altura cómoda para ver en celular */
+        min-height: 400px;
         height: 400px;
     }
     
-    /* 2. ANCHO 100%: La tarjeta crece para que el texto respire */
     .tarjeta-info-local {
         width: 100%;
         box-sizing: border-box;
-        padding: 30px; /* Buen padding interno */
+        padding: 25px;
     }
 }
 
@@ -438,10 +440,10 @@ body {
 footer {
     background-color: #111;
     color: #999;
-    padding: 40px 20px;
+    padding: 30px 20px;
     font-size: 14px;
     border-top: 1px solid #222;
-    margin-top: auto;
+    margin-top: auto; /* Empuja el footer al final del contenido, no más abajo */
     width: 100%;
     box-sizing: border-box;
 }

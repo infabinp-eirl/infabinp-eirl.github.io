@@ -255,10 +255,9 @@ body {
    ESTILOS DE LA PÁGINA "LOCALES"
    ========================================= */
 
-/* --- CAMBIO 1: Aumentamos el ancho máximo a 1600px para que el mapa se expanda --- */
 .contenedor-principal {
-    max-width: 1600px; /* Antes era 1200px. Ahora es más ancho */
-    width: 95%; /* Ocupa casi toda la pantalla en monitores grandes */
+    max-width: 1600px;
+    width: 95%;
     margin: 60px auto;
     padding: 0 20px;
     text-align: center;
@@ -273,12 +272,14 @@ body {
     text-transform: uppercase;
 }
 
+/* --- MEJORA: Texto oscuro y más margen abajo ("Aire") --- */
 .descripcion-pagina {
-    color: #333;
+    color: #222; /* Casi negro para legibilidad perfecta */
+    font-weight: 500; /* Un poco más grueso */
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 80px auto; /* Aumentado a 80px para dar "aire" */
 }
 
 /* --- Contenedor Dividido --- */
@@ -290,9 +291,9 @@ body {
     align-items: stretch;
 }
 
-/* --- CAMBIO 2: El mapa ahora ocupa 3 partes (75% del ancho) --- */
+/* --- Mapa --- */
 .mapa-wrapper {
-    flex: 3; /* Antes era flex: 2. Ahora es más dominante */
+    flex: 3; 
     min-height: 550px;
     background-color: #eee;
     border-radius: 20px;
@@ -301,10 +302,10 @@ body {
     border: none;
 }
 
-/* --- La Tarjeta (ocupa 1 parte, 25% del ancho) --- */
+/* --- Tarjeta --- */
 .tarjeta-info-local {
     flex: 1;
-    min-width: 300px; /* Asegura que la tarjeta no se aplaste demasiado */
+    min-width: 300px;
     background-color: #fff;
     padding: 40px;
     border-radius: 12px;
@@ -388,7 +389,6 @@ body {
     font-size: 18px;
 }
 
-/* Estilo NEGRO */
 .btn-gps.gmaps {
     background-color: #000;
     color: #fff;
@@ -404,16 +404,21 @@ body {
     box-shadow: 0 8px 25px rgba(232, 76, 80, 0.4);
 }
 
-/* RESPONSIVE */
+/* --- RESPONSIVE / MÓVIL --- */
 @media (max-width: 900px) {
+    /* Esto asegura que la tarjeta baje en celular */
     .contenedor-locales-split {
         flex-direction: column;
+        gap: 40px; /* Más espacio vertical entre mapa y tarjeta en celular */
     }
+    
     .mapa-wrapper {
         min-height: 400px;
         height: 400px;
         width: 100%;
+        margin-bottom: 20px;
     }
+    
     .tarjeta-info-local {
         width: 100%;
         box-sizing: border-box;

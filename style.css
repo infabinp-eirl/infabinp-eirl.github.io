@@ -272,14 +272,13 @@ body {
     text-transform: uppercase;
 }
 
-/* --- MEJORA: Texto oscuro y más margen abajo ("Aire") --- */
 .descripcion-pagina {
-    color: #222; /* Casi negro para legibilidad perfecta */
-    font-weight: 500; /* Un poco más grueso */
+    color: #222;
+    font-weight: 500;
     font-size: 18px;
     line-height: 1.6;
     max-width: 800px;
-    margin: 0 auto 80px auto; /* Aumentado a 80px para dar "aire" */
+    margin: 0 auto 80px auto;
 }
 
 /* --- Contenedor Dividido --- */
@@ -404,24 +403,34 @@ body {
     box-shadow: 0 8px 25px rgba(232, 76, 80, 0.4);
 }
 
-/* --- RESPONSIVE / MÓVIL --- */
+/* ========================================================
+   RESPONSIVE / VERSIÓN MÓVIL
+   Aplicando los cambios de las imágenes solicitadas
+   ======================================================== */
 @media (max-width: 900px) {
-    /* Esto asegura que la tarjeta baje en celular */
+    /* Ajustamos el contenedor para dar más espacio a los bordes */
+    .contenedor-principal {
+        padding: 0 15px;
+    }
+
+    /* 1. CAMBIO A COLUMNA: Apila los elementos uno encima del otro */
     .contenedor-locales-split {
         flex-direction: column;
-        gap: 40px; /* Más espacio vertical entre mapa y tarjeta en celular */
+        gap: 30px; /* 3. AIRE: Espacio de 30px entre mapa y tarjeta */
     }
     
+    /* 2. ANCHO 100%: El mapa ocupa todo el ancho */
     .mapa-wrapper {
-        min-height: 400px;
-        height: 400px;
         width: 100%;
-        margin-bottom: 20px;
+        min-height: 400px; /* Altura cómoda para ver en celular */
+        height: 400px;
     }
     
+    /* 2. ANCHO 100%: La tarjeta crece para que el texto respire */
     .tarjeta-info-local {
         width: 100%;
         box-sizing: border-box;
+        padding: 30px; /* Buen padding interno */
     }
 }
 
